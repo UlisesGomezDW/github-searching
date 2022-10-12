@@ -8,7 +8,10 @@ export interface Repositories {
     full_name: string
     html_url: string
     description: string
-    owner: {
-        avatar_url: string
+    language: string
+    topics: string[]
+    stargazers_count: number
+    license: {
+        name: string
     }
 }
