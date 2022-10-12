@@ -3,6 +3,7 @@ import repository from "./repository"
 import close from "./close"
 import search from "./search"
 import arrowLeft from "./arrow-left"
+import github from "./github"
 
 import { Props, Collection } from "./index.type"
 
@@ -12,6 +13,7 @@ const COLLECTION: Collection = {
     close,
     search,
     arrowLeft,
+    github,
 }
 
 function Icon(props: Props): JSX.Element {

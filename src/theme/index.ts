@@ -22,4 +22,12 @@ export const theme = {
     border: {
         color: "#04172A1A",
     },
+    breakPoints: {
+        xs: "400px",
+        sm: "600px",
+        md: "768px",
+        lg: "992px",
+        xl: "1200px",
+        xxlg: "2000px",
+    },
 }

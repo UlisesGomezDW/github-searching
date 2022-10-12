@@ -12,18 +12,17 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-size: 10px;
         font-family: 'Montserrat', sans-serif;
+        color: ${({ theme }) => theme.font.color.primary};
     }
     a {
         color: inherit;
-        text-decoration: none;
     }
     p {
         margin: 0;
-        color: ${({ theme }) => theme.font.color.primary};
+        
     }
-    h5 {
+    h5, h1 {
         margin: 0;
-        color: ${({ theme }) => theme.font.color.primary};
     }
 
 `
