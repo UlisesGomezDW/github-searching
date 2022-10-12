@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useRouter } from "next/router"
 import Icon from "src/components/common/icon"
 import SearchInput from "src/components/common/input/search"
 import Link from "src/components/common/link"
@@ -10,13 +11,15 @@ function SearchLayout(props: Props): JSX.Element {
     const { children, className = "", style = {}, links = [] } = props
     const [search, setSearch] = useState<string>("")
 
+    const router = useRouter()
+
     return (
         <Section className={className} style={style}>
             <section className="section-header">
-                <Touchable className="section-home">
+                <Touchable className="section-home" onClick={() => router.replace("/")}>
                     <Icon height={"100%"} width={"100%"} name={"github"} />
                 </Touchable>
-                <Touchable className="section-back">
+                <Touchable className="section-back" onClick={() => router.back()}>
                     <Icon height={"100%"} width={"100%"} name={"arrowLeft"} />
                 </Touchable>
                 <SearchInput
@@ -27,8 +30,8 @@ function SearchLayout(props: Props): JSX.Element {
                 />
                 <div className="section-links">
                     {links.length > 0 &&
-                        links.map(({ name = "" }, index) => (
-                            <Link key={index} href={"/"}>
+                        links.map(({ name = "", path = "" }, index) => (
+                            <Link key={index} href={path}>
                                 {name}
                             </Link>
                         ))}
