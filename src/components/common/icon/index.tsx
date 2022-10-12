@@ -1,10 +1,17 @@
 import star from "./star"
 import repository from "./repository"
+import close from "./close"
+import search from "./search"
+import arrowLeft from "./arrow-left"
+
 import { Props, Collection } from "./index.type"
 
 const COLLECTION: Collection = {
     star,
     repository,
+    close,
+    search,
+    arrowLeft,
 }
 
 function Icon(props: Props): JSX.Element {

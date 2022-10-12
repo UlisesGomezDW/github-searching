@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react"
 import { ComponentProps } from "src/types/component"
 
 export interface Props extends ComponentProps {
@@ -7,4 +8,9 @@ export interface Props extends ComponentProps {
     topics: string[]
     license: string
     stars: number
+    onClick?: MouseEventHandler<HTMLDivElement> | undefined
+}
+
+export type LangColors = {
+    [key: string]: string
 }

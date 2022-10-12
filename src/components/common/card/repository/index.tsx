@@ -1,7 +1,11 @@
 import Icon from "src/components/common/icon"
 import Tag from "src/components/common/tag"
+import langColors from "src/utils/lang-colors.json"
+import { useTheme } from "styled-components"
 import { Base } from "./index.styled"
-import { Props } from "./index.type"
+import { Props, LangColors } from "./index.type"
+
+const colors: LangColors = langColors
 
 function RespositoryCard(props: Props): JSX.Element {
     const {
@@ -13,10 +17,13 @@ function RespositoryCard(props: Props): JSX.Element {
         stars = 0,
         language = "",
         license = "",
+        onClick = undefined,
     } = props
 
+    const { font } = useTheme()
+
     return (
-        <Base className={className} style={style}>
+        <Base className={className} style={style} onClick={onClick}>
             <div className="card-row card-head">
                 <Icon className="card-head-icon" name={"repository"} />
                 <h5 className="card-title">{name}</h5>
@@ -35,7 +42,10 @@ function RespositoryCard(props: Props): JSX.Element {
                     <p className="card-item-label">{stars}</p>
                 </div>
                 <div className="card-row card-item">
-                    <span className="card-item-shape"></span>
+                    <span
+                        className="card-item-shape"
+                        style={{ backgroundColor: colors[language] || font.color.primary }}
+                    ></span>
                     <p className="card-item-label">{language}</p>
                 </div>
                 <p className="card-item-label">{license}</p>

@@ -6,10 +6,12 @@ import { GlobalStyle } from "src/styles/global.styled"
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <Component {...pageProps} />
-        </ThemeProvider>
+        <>
+            <ThemeProvider theme={theme}>
+                <GlobalStyle />
+                <Component {...pageProps} />
+            </ThemeProvider>
+        </>
     )
 }
 

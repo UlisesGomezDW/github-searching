@@ -9,10 +9,11 @@ export const Base = styled(CardBase)`
         border-radius: 1rem;
     }
     .card-description {
+        font-size: ${({ theme }) => theme.font.size.sm};
         margin-left: 1.5rem;
     }
     .card-description-name {
-        font-size: 1.6rem;
+        font-size: ${({ theme }) => theme.font.size.md};
         margin-bottom: 0.5rem;
     }
     .card-description-label {

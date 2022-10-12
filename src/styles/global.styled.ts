@@ -5,11 +5,13 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-tap-highlight-color: transparent;
         box-sizing: border-box;
     }
+    *:focus {
+        outline: none;
+    }
     html,
     body {
         font-size: 10px;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-            Helvetica Neue, sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
     a {
         color: inherit;

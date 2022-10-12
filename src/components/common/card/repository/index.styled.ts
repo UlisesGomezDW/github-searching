@@ -16,11 +16,11 @@ export const Base = styled(CardBase)`
         width: 1.6rem;
     }
     .card-title {
-        font-size: 1.6rem;
+        font-size: ${({ theme }) => theme.font.size.md};
         margin-left: 0.5rem;
     }
     .card-description {
-        font-size: 1.4rem;
+        font-size: ${({ theme }) => theme.font.size.sm};
         margin-bottom: 0.4rem;
     }
     .card-topics {
@@ -35,14 +35,13 @@ export const Base = styled(CardBase)`
         fill: ${({ theme }) => theme.font.color.secondary};
     }
     .card-item-label {
-        font-size: 1.2rem;
+        font-size: ${({ theme }) => theme.font.size.xs};
         margin-left: 0.5rem;
         color: ${({ theme }) => theme.font.color.secondary};
     }
     .card-item-shape {
         width: 1.2rem;
         height: 1.2rem;
-        background-color: black;
         border-radius: 50%;
     }
 `
