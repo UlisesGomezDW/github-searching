@@ -17,7 +17,7 @@ const modelDarkTheme = {
 
 function Provider(props: ProviderProps): JSX.Element {
     const { children } = props
-    const [darkMode, setDarkMode] = useState<boolean>(true)
+    const [darkMode, setDarkMode] = useState<boolean>(false)
 
     const toggle = () => setDarkMode(!darkMode)
 
