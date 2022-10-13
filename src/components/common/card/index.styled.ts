@@ -6,4 +6,5 @@ export const CardBase = styled.div`
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid ${({ theme }) => theme.border.color};
+    cursor: pointer;
 `

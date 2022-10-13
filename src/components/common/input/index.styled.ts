@@ -17,7 +17,7 @@ export const SearchBase = styled.div<SearchStyledProps>`
     flex-direction: row;
     align-items: center;
     border-radius: 30px;
-    background-color: #f5f9fd;
+    background-color: ${({ theme }) => theme.color.input};
     border: 2px solid ${({ focus, theme }) => (focus ? theme.font.color.primary : "transparent")};
     padding: 0 10px;
     transition: all ease-in-out 0.15s;

@@ -1,12 +1,15 @@
+const DARK = "#1A1C1E"
+
 export const theme = {
     color: {
-        primary: "white",
-        secondary: "black",
+        primary: "#fff",
+        background: "#f0f2f5",
+        input: "#f5f9fd",
     },
     font: {
         color: {
-            primary: "#1A1C1E",
-            secondary: "#1A1C1E80",
+            primary: DARK,
+            secondary: `${DARK}99`,
         },
         size: {
             xxs: "1rem",
@@ -16,7 +19,7 @@ export const theme = {
             lg: "2rem",
             xlg: "2.4rem",
             xxlg: "2.6rem",
-            xxxlg: "3.2rem",
+            xxxlg: "4.2rem",
         },
     },
     border: {
