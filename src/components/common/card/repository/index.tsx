@@ -48,7 +48,7 @@ function RespositoryCard(props: Props): JSX.Element {
                         className="card-item-shape"
                         style={{ backgroundColor: colors[language] || font.color.primary }}
                     ></span>
-                    <p className="card-item-label">{language || "Lenguaje no conocido"}</p>
+                    <p className="card-item-label">{language || "Otro"}</p>
                 </div>
                 <p className="card-item-label">{license}</p>
             </div>
