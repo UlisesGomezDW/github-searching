@@ -41,14 +41,14 @@ function RespositoryCard(props: Props): JSX.Element {
             <div className="card-row">
                 <div className="card-row card-item">
                     <Icon className="card-item-icon" name={"star"} />
-                    <p className="card-item-label">{stars > 0 ? `${Math.round(stars / 1000)}k` : "Sin estrellas"}</p>
+                    <p className="card-item-label">{stars > 0 ? `${Math.round(stars / 1000)}k` : "0"}</p>
                 </div>
                 <div className="card-row card-item">
                     <span
                         className="card-item-shape"
                         style={{ backgroundColor: colors[language] || font.color.primary }}
                     ></span>
-                    <p className="card-item-label">{language}</p>
+                    <p className="card-item-label">{language || "Lenguaje no conocido"}</p>
                 </div>
                 <p className="card-item-label">{license}</p>
             </div>

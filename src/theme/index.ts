@@ -1,10 +1,12 @@
-const DARK = "#1A1C1E"
+export const DARK = "#1A1C1E"
+export const SOLID = "#1890ff"
 
 export const theme = {
     color: {
         primary: "#fff",
         background: "#f0f2f5",
         input: "#f5f9fd",
+        solid: SOLID,
     },
     font: {
         color: {
