@@ -3,6 +3,7 @@ import Empty from "src/components/common/empty"
 import { UserCard } from "src/components/common/card"
 import { useFetch } from "src/hooks/fetch"
 import { User } from "src/types/data"
+import { externalRedirect } from "src/utils/events"
 import { Skeleton, Content } from "./index.styled"
 
 function Users(): JSX.Element {
@@ -19,7 +20,13 @@ function Users(): JSX.Element {
                     data && data.length > 0 ? (
                         <Content>
                             {data.map(({ login = "", avatar_url = "", html_url = "" }: User, index) => (
-                                <UserCard key={index} name={login} description={html_url} image={avatar_url} />
+                                <UserCard
+                                    key={index}
+                                    name={login}
+                                    description={html_url}
+                                    image={avatar_url}
+                                    onClick={(e) => externalRedirect(e, html_url)}
+                                />
                             ))}
                         </Content>
                     ) : (

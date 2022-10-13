@@ -1,7 +1,8 @@
 import "normalize.css"
 import type { AppProps } from "next/app"
 import { ThemeProvider } from "styled-components"
-import { theme } from "src/theme"
+import NextNProgress from "nextjs-progressbar"
+import { theme, SOLID } from "src/theme"
 import { GlobalStyle } from "src/styles/global.styled"
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <>
             <ThemeProvider theme={theme}>
                 <GlobalStyle />
+                <NextNProgress color={SOLID} height={5} />
                 <Component {...pageProps} />
             </ThemeProvider>
         </>

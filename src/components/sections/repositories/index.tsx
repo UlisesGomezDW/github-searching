@@ -3,10 +3,12 @@ import Empty from "src/components/common/empty"
 import { RespositoryCard } from "src/components/common/card"
 import { useFetch } from "src/hooks/fetch"
 import { Repository } from "src/types/data"
+import { externalRedirect } from "src/utils/events"
 import { Skeleton, Content } from "./index.styled"
 
 function Repositories(): JSX.Element {
     const { data, loading, search, setSearch } = useFetch("repositories")
+
     return (
         <SearchLayout
             value={search}
@@ -38,6 +40,7 @@ function Repositories(): JSX.Element {
                                         topics={topics}
                                         license={license?.name || ""}
                                         language={language}
+                                        onClick={(e) => externalRedirect(e, html_url)}
                                     />
                                 )
                             )}

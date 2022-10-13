@@ -15,7 +15,7 @@ export const Section = styled.section`
         flex-direction: row;
         align-items: center;
         padding: 0 1.5rem;
-        background-color: white;
+        background-color: ${({ theme }) => theme.color.primary};
     }
     .section-back {
         height: 24px;
@@ -41,7 +41,7 @@ export const Section = styled.section`
         height: 32px;
         width: 32px;
         svg {
-            fill: black;
+            fill: ${({ theme }) => theme.font.color.primary};
         }
     }
     .section-links {
@@ -76,12 +76,12 @@ export const Section = styled.section`
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: #f0f2f5;
+            background-color: ${({ theme }) => theme.color.background};
         }
         .section-main-card {
             height: 80vh;
             width: 80%;
-            background-color: white;
+            background-color: ${({ theme }) => theme.color.primary};
             border-radius: 20px;
         }
     }
