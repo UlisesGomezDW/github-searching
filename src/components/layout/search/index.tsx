@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useRouter } from "next/router"
 import Icon from "src/components/common/icon"
 import SearchInput from "src/components/common/input/search"
@@ -8,8 +7,7 @@ import { Section } from "./index.styled"
 import { Props } from "./index.type"
 
 function SearchLayout(props: Props): JSX.Element {
-    const { children, className = "", style = {}, links = [] } = props
-    const [search, setSearch] = useState<string>("")
+    const { children, className = "", style = {}, links = [], value = "", onChange } = props
 
     const router = useRouter()
 
@@ -24,9 +22,9 @@ function SearchLayout(props: Props): JSX.Element {
                 </Touchable>
                 <SearchInput
                     className="section-search-input"
-                    placeholder="¿Qué quieres escuchar?"
-                    value={search}
-                    onChange={(value) => setSearch(value)}
+                    placeholder="¿Qué quieres buscar?"
+                    value={value}
+                    onChange={onChange}
                 />
                 <div className="section-links">
                     {links.length > 0 &&
