@@ -21,6 +21,14 @@ export const Header = styled.section`
             fill: ${({ theme }) => theme.font.color.primary};
         }
     }
+    .header-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .switch-theme {
+            margin-left: 2rem;
+        }
+    }
     .header-link:nth-child(1) {
         margin-right: 10px;
     }
@@ -39,6 +47,7 @@ export const Main = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: ${({ theme }) => theme.color.background};
     .main-info-title {
         font-size: 4.2rem;
         margin-bottom: 2rem;

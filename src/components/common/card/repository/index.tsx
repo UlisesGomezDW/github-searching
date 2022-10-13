@@ -25,7 +25,7 @@ function RespositoryCard(props: Props): JSX.Element {
     return (
         <Base className={className} style={style} onClick={onClick}>
             <div className="card-row card-head">
-                <Icon className="card-head-icon" name={"repository"} />
+                <Icon className="card-head-icon" name={"repository"} fillColor={font.color.primary} />
                 <h5 className="card-title">{name}</h5>
             </div>
             <p className="card-description">{description}</p>

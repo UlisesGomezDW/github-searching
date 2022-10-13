@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Icon from "src/components/common/icon"
 import Link from "src/components/common/link"
+import SwitchTheme from "src/components/common/switch-theme"
 import Touchable from "src/components/common/touchable"
 import { links } from "./index.data"
 import { Container, Header, Main } from "./index.styled"
@@ -12,13 +13,16 @@ function Landing(): JSX.Element {
                 <Touchable className="header-icon">
                     <Icon height={"100%"} width={"100%"} name={"github"} />
                 </Touchable>
-                <div>
-                    {links.map(({ name = "", path = "" }, index) => (
-                        <Link className="header-link" key={index} href={path}>
-                            {name}
-                        </Link>
-                    ))}
-                </div>
+                <nav className="header-nav">
+                    <div>
+                        {links.map(({ name = "", path = "" }, index) => (
+                            <Link className="header-link" key={index} href={path}>
+                                {name}
+                            </Link>
+                        ))}
+                    </div>
+                    <SwitchTheme />
+                </nav>
             </Header>
             <Main>
                 <div className="main-info">
