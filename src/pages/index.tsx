@@ -7,7 +7,7 @@ const Home: NextPage = () => {
         <>
             <Head
                 title="GitHub | Searching"
-                description="GitHub - Searching, ofrece una experiencia única en la busqueda de usuarios y repositorios."
+                description="GitHub - Searching, ofrece una experiencia única en la búsqueda de usuarios y repositorios."
             />
 
             <Landing />

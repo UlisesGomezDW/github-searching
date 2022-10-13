@@ -39,7 +39,7 @@ export const darkTheme = {
     font: {
         color: {
             primary: "#E7E9EA",
-            secondary: `#768390`,
+            secondary: `#ADBAC7`,
         },
     },
     border: {
