@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.section`
     width: 100%;
-    height: 100vh;
+    height: 100%;
 `
 export const Header = styled.section`
     width: 100%;
@@ -19,6 +19,14 @@ export const Header = styled.section`
         width: 32px;
         svg {
             fill: ${({ theme }) => theme.font.color.primary};
+        }
+    }
+    .header-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .switch-theme {
+            margin-left: 2rem;
         }
     }
     .header-link:nth-child(1) {
@@ -39,6 +47,7 @@ export const Main = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: ${({ theme }) => theme.color.background};
     .main-info-title {
         font-size: 4.2rem;
         margin-bottom: 2rem;

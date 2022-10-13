@@ -9,7 +9,7 @@ const animation = keyframes`
 export const ItemBase = styled.div`
     width: 100%;
     height: 50px;
-    background-color: #f1f4f8;
+    background-color: ${({ theme }) => theme.color.skeleton.background};
     display: inline-block;
     position: relative;
     overflow: hidden;
@@ -22,9 +22,9 @@ export const ItemBase = styled.div`
         transform: translateX(-100%);
         background: linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.7) 50%,
-            rgba(255, 255, 255, 0) 100%
+            ${({ theme }) => theme.color.skeleton.color} 0%,
+            ${({ theme }) => theme.color.skeleton.opacity} 50%,
+            ${({ theme }) => theme.color.skeleton.color} 100%
         );
         animation: ${animation} 2s infinite;
         content: "";

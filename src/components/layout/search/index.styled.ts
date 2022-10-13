@@ -3,7 +3,7 @@ import StyledScroll from "src/components/common/scroll"
 
 export const Section = styled.section`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -21,6 +21,9 @@ export const Section = styled.section`
         height: 24px;
         width: 24px;
         margin-right: 10px;
+        svg {
+            fill: ${({ theme }) => theme.font.color.primary};
+        }
     }
     .section-search-input {
         width: calc(100% - 34px);
@@ -34,6 +37,7 @@ export const Section = styled.section`
         height: 100%;
         padding: 0 2rem;
         overflow-y: auto;
+        background-color: ${({ theme }) => theme.color.primary};
         ${StyledScroll};
     }
     .section-home {
@@ -81,7 +85,6 @@ export const Section = styled.section`
         .section-main-card {
             height: 80vh;
             width: 80%;
-            background-color: ${({ theme }) => theme.color.primary};
             border-radius: 20px;
         }
     }

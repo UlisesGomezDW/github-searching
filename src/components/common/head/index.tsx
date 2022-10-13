@@ -1,15 +1,17 @@
 import Head from "next/head"
 import { Props } from "./index.type"
+import { WEB_URL } from "enviroment"
 
 const name = "Github Searching"
-const site = "https://github.com"
-const image = ""
+const site = WEB_URL
+const image = "/logo512.png"
 
 function HeaderSEO(props: Props): JSX.Element {
     const { title = "", description = "" } = props
     return (
         <Head>
             <title>{title}</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="application-name" content={name}></meta>
             <meta name="description" content={description}></meta>
             <meta
