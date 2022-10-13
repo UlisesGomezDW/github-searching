@@ -24,7 +24,11 @@ export const Base = styled(CardBase)`
         margin-bottom: 0.4rem;
     }
     .card-topics {
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .card-topics-tag {
+        margin-top: 8px;
+        margin-right: 8px;
     }
     .card-item {
         margin-right: 1rem;

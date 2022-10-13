@@ -4,7 +4,7 @@ export interface User {
     html_url: string
 }
 
-export interface Repositories {
+export interface Repository {
     full_name: string
     html_url: string
     description: string

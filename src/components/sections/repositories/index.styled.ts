@@ -6,7 +6,7 @@ export const Skeleton = styled(SkeletonComponent)`
     grid-template-columns: 1fr;
     row-gap: 2rem;
     .skeleton-item {
-        height: 8.01rem;
+        height: 14.2rem;
     }
 `
 

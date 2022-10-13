@@ -7,4 +7,6 @@ export interface Props extends ComponentProps {
         name: string
         path: string
     }[]
+    value: string
+    onChange: (value: string) => void
 }
