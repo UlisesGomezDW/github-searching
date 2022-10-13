@@ -28,7 +28,7 @@ function Landing(): JSX.Element {
                 <div className="main-info">
                     <h1 className="main-info-title">Encuentra el perfil o repositorio que buscas</h1>
                     <p className="main-info-description">
-                        GitHub - Searching, ofrece una experiencia única en la busqueda de usuarios y repositorios.
+                        GitHub - Searching, ofrece una experiencia única en la búsqueda de usuarios y repositorios.
                     </p>
                 </div>
                 <div className="main-image">
